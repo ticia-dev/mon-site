@@ -307,3 +307,51 @@ header[id]{
 .phone .big .phoneIcon{
   font-size:34px;
 }
+
+
+/* Mobile navbar: empêche "Rendez-vous" de passer à la ligne */
+.nav .btn{
+  white-space:nowrap;
+  flex-shrink:0;
+}
+
+@media (max-width:900px){
+  .navin{
+    gap:10px;
+    padding:8px 12px;
+  }
+
+  .logo{
+    gap:8px;
+    min-width:0;
+  }
+
+  .brand{
+    font-size:13px;
+  }
+
+  .sub{
+    font-size:10px;
+  }
+
+  .nav .btn{
+    padding:12px 16px;
+    gap:7px;
+    font-size:16px;
+  }
+}
+
+@media (max-width:390px){
+  .nav .btn{
+    padding:11px 14px;
+    font-size:15px;
+  }
+
+  .brand{
+    font-size:12px;
+  }
+
+  .sub{
+    font-size:9px;
+  }
+}
