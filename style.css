@@ -58,10 +58,10 @@ section{padding:78px 22px}
 .step h3{font-size:15px;letter-spacing:.16em;text-transform:uppercase;margin:0 0 12px;color:var(--bordeaux)}
 .step p{font-size:14px;margin:0;color:#5e5250}
 .values{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:20px}
-.value{padding:24px;text-align:center}
+.value{padding:20px;text-align:center}
 .icon{font-size:30px;color:var(--bordeaux);margin-bottom:10px}
-.value h3{font-size:14px;letter-spacing:.18em;text-transform:uppercase;margin:0 0 10px;color:var(--bordeaux)}
-.value p{font-size:14px;margin:0;color:#5e5250}
+.value h3{font-size:14px;letter-spacing:.18em;text-transform:uppercase;margin:0 0 10px;color:var(--bordeaux);min-height:48px;display:flex;align-items:center;justify-content:center}
+.value p{font-size:14px;margin:0;color:#5e5250;text-align:left;line-height:1.6}
 .split{display:grid;grid-template-columns:.95fr 1.05fr;gap:32px;align-items:center}
 .list{padding:34px 36px}
 .list ul{list-style:none;padding:0;margin:0}
@@ -74,7 +74,7 @@ section{padding:78px 22px}
 .phone{display:grid;place-items:center;text-align:center;background:var(--bordeaux);color:white;border-radius:28px;padding:28px}
 .phone .big{font-size:34px;margin-bottom:8px}
 .reviews{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.quote{padding:24px;text-align:center;min-height:190px}
+.quote{padding:24px;text-align:left;min-height:190px}
 .quote:before{content:"“";font-size:54px;color:var(--bordeaux2);font-family:Georgia,serif;line-height:.6}
 .quote p{font-size:14px;color:#514644}
 .quote .small{font-size:13px;color:var(--muted)}
