@@ -440,3 +440,38 @@ header[id]{
     padding:24px 0;
   }
 }
+
+
+/* === Correction définitive ordre "Où me consulter ?" === */
+/* Ordinateur : Nantes | Téléphone | Vertou */
+.locations .loc-nantes{
+  order:1 !important;
+}
+
+.locations .phone{
+  order:2 !important;
+}
+
+.locations .loc-vertou{
+  order:3 !important;
+}
+
+/* Téléphone : Téléphone puis Nantes puis Vertou */
+@media (max-width:900px){
+  .locations{
+    display:flex !important;
+    flex-direction:column !important;
+  }
+
+  .locations .phone{
+    order:1 !important;
+  }
+
+  .locations .loc-nantes{
+    order:2 !important;
+  }
+
+  .locations .loc-vertou{
+    order:3 !important;
+  }
+}
