@@ -442,36 +442,41 @@ header[id]{
 }
 
 
-/* === Correction définitive ordre "Où me consulter ?" === */
-/* Ordinateur : Nantes | Téléphone | Vertou */
-.locations .loc-nantes{
-  order:1 !important;
-}
+/* ===== Téléphone en premier sur mobile ===== */
+.locations .loc-nantes{order:1;}
+.locations .phone{order:2;}
+.locations .loc-vertou{order:3;}
 
-.locations .phone{
-  order:2 !important;
-}
-
-.locations .loc-vertou{
-  order:3 !important;
-}
-
-/* Téléphone : Téléphone puis Nantes puis Vertou */
-@media (max-width:900px){
+@media(max-width:900px){
   .locations{
     display:flex !important;
     flex-direction:column !important;
   }
+  .locations .phone{order:1 !important;}
+  .locations .loc-nantes{order:2 !important;}
+  .locations .loc-vertou{order:3 !important;}
+}
 
-  .locations .phone{
-    order:1 !important;
-  }
+/* ===== FAQ : 2 colonnes fixes, les cartes ne changent plus de colonne ===== */
+.faq{
+  display:grid !important;
+  grid-template-columns:repeat(2, 1fr) !important;
+  gap:18px !important;
+  align-items:start !important;
+}
 
-  .locations .loc-nantes{
-    order:2 !important;
-  }
+.faqCol{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
 
-  .locations .loc-vertou{
-    order:3 !important;
+.faq details{
+  width:100%;
+}
+
+@media(max-width:900px){
+  .faq{
+    grid-template-columns:1fr !important;
   }
 }
