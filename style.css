@@ -463,19 +463,117 @@ header[id]{
 }
 
 
-/* ===== Téléphone en premier sur mobile ===== */
-.locations .loc-nantes{order:1;}
-.locations .phone{order:2;}
-.locations .loc-vertou{order:3;}
+/* ===== Où me consulter — cartes façon maquette ===== */
+.consultCards{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:22px;
+  max-width:760px;
+  margin:0 auto;
+}
 
-@media(max-width:900px){
-  .locations{
-    display:flex !important;
-    flex-direction:column !important;
+.consultCard{
+  border-radius:22px;
+  padding:28px 26px;
+}
+
+.consultCard h3{
+  font-size:20px;
+  margin:0 0 14px;
+  letter-spacing:.06em;
+}
+
+.consultCard-rule{
+  width:36px;
+  height:1px;
+  background:var(--bordeaux);
+  margin:0 0 16px;
+}
+
+.consultCard-rule--dark{
+  background:rgba(255,250,245,.35);
+  margin-top:18px;
+  margin-bottom:16px;
+}
+
+.consultCard-name{
+  font-weight:650;
+  margin:0 0 6px;
+  font-size:15px;
+}
+
+.consultCard-line{
+  margin:0 0 10px;
+  font-size:14px;
+}
+
+.consultCard-note{
+  margin:0;
+  font-size:13px;
+  opacity:.85;
+}
+
+.consultCard--light{
+  background:var(--paper);
+  border:1px solid var(--line);
+  color:var(--ink);
+  box-shadow:0 14px 34px rgba(92,62,58,.08);
+}
+
+.consultCard--light h3{
+  color:var(--bordeaux);
+  font-family:Georgia,'Times New Roman',serif;
+}
+
+.consultCard--dark{
+  background:var(--bordeaux2);
+  color:#fffaf5;
+  box-shadow:0 14px 34px rgba(92,62,58,.14);
+  text-align:left;
+}
+
+.consultCard--dark h3{
+  color:#fffaf5;
+  font-family:Georgia,'Times New Roman',serif;
+}
+
+.consultCard-badge{
+  display:inline-grid;
+  place-items:center;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:rgba(255,250,245,.18);
+  font-size:18px;
+  margin-bottom:12px;
+}
+
+.consultCard-cta{
+  width:fit-content;
+  gap:8px;
+  font-size:14px;
+  padding:11px 16px;
+  margin:6px 0 10px;
+  justify-content:flex-start;
+}
+
+.consultCard-sub{
+  margin:0;
+  font-size:13px;
+  opacity:.9;
+}
+
+.consultCard-phoneNumber{
+  margin:0 0 8px;
+  font-size:18px;
+  font-weight:700;
+}
+
+@media(max-width:700px){
+  .consultCards{
+    grid-template-columns:1fr;
+    max-width:420px;
   }
-  .locations .phone{order:1 !important;}
-  .locations .loc-nantes{order:2 !important;}
-  .locations .loc-vertou{order:3 !important;}
 }
 
 /* ===== FAQ : 2 colonnes fixes, les cartes ne changent plus de colonne ===== */
