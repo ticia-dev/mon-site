@@ -17,6 +17,27 @@ h1,h2,h3{font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spac
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--bordeaux);color:white;border-radius:999px;padding:12px 20px;font-weight:650;box-shadow:0 10px 24px rgba(123,75,73,.16);transition:.25s}
 .btn:hover{transform:translateY(-2px);background:#6d403e}
 .btn.light{background:white;color:var(--bordeaux);border:1px solid var(--line);box-shadow:none}
+.doctolibBtn{
+  padding:14px 24px;
+  font-size:17px;
+  gap:10px;
+}
+
+.doctolibBtn:hover{
+  transform:translateY(-2px);
+  background:#6d403e;
+}
+
+.phoneBtn{
+  padding:14px 24px;
+  font-size:17px;
+  gap:10px;
+}
+
+.calendarIcon{
+  font-size:20px;
+  line-height:1;
+}
 .hero{position:relative;overflow:hidden}
 .hero:before{content:"";position:absolute;right:-120px;top:70px;width:55%;height:520px;background:linear-gradient(135deg,#fffaf5,#eadcd2);border-radius:45% 0 0 45%;box-shadow:0 26px 80px rgba(73,52,48,.09)}
 .heroInner{position:relative;max-width:1120px;margin:auto;padding:76px 22px;display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
@@ -478,5 +499,40 @@ header[id]{
 @media(max-width:900px){
   .faq{
     grid-template-columns:1fr !important;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .nav .btn {
+    padding: 9px 13px;
+    font-size: 12px;
+    gap: 5px;
+  }
+
+  .nav .btn .icon {
+    font-size: 13px;
+  }
+
+  .navin {
+    padding: 7px 10px;
+    gap: 8px;
+  }
+
+  .logo {
+    gap: 6px;
+  }
+
+  .logo img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .brand {
+    font-size: 11px;
+  }
+
+  .sub {
+    font-size: 8px;
   }
 }
